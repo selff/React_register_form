@@ -1,0 +1,31 @@
+{
+  "name": "register_form_ru",
+  "version": "0.0.1",
+  "private": true,
+  "devDependencies": {
+    "react-scripts": "0.8.5"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "lodash": "^4.17.4",
+    "lodash.findwhere": "^3.1.0",
+    "react": "^15.4.2",
+    "react-autosuggest": "^8.0.0",
+    "react-dom": "^15.4.2",
+    "react-onclickoutside": "^5.8.3",
+    "react-telephone-input": "^3.8.6"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
+  "main": "index.js",
+  "keywords": [
+    "form"
+  ],
+  "author": "me",
+  "license": "ISC"
+}
