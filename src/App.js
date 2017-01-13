@@ -4,9 +4,7 @@ import Autosuggest from 'react-autosuggest';
 import ReactTelephoneInput from 'react-telephone-input';
 import './css/App.css';
 import './css/Phone.css';
-import './css/Profession.css';
-
-//import {ReactTelephoneInput} from './PhoneInput.js';
+import './css/Autocomplete.css';
 
 const professions = [
   "Артист","Астролог","Балетмейстер","Брокер","Водопроводчик","Визажист","Грузчик","Гробовщик",
@@ -18,7 +16,6 @@ const professions = [
   "Шахтер","Шоколатье","Щипачь","Эндокринолог","Эквелибрист","Юрист","Ювелир","Ядерщик"
 ]
   
-
 function escapeRegexCharacters(str) {
   return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
@@ -81,12 +78,14 @@ function PhoneLabel() {
   )
 }
 
-function ButtonSubmit() {
-  return (
-    <div className="submit">
-      <input type="submit" value="Зарегистрироваться" />
-    </div>
-  )
+class ButtonSubmit extends React.Component {
+  render() {
+    return (
+      <div className="submit">
+        <input type="submit" value="Зарегистрироваться" />
+      </div>
+    );
+  }
 }
 
 class App extends React.Component {
@@ -98,6 +97,10 @@ class App extends React.Component {
       chars: '',
       suggestions: []
     };    
+  }
+  
+  validateForm = (e) => {
+    e.preventDefault();
   }
 
   onChange = (event, { newValue, method }) => {
@@ -128,7 +131,7 @@ class App extends React.Component {
     };
 
     return (
-    <form className="my-app">
+    <form className="my-app" onSubmit={this.validateForm}>
       <FormTitle />
       <InputFio />
       <Autosuggest

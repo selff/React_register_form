@@ -1,0 +1,87 @@
+/**
+* Main App style
+**/
+
+body {
+  font-family: Helvetica, sans-serif;
+  color:#3d3d3d;
+  font-size: 13px;
+}
+
+form.my-app {
+  margin:10px;
+  padding: 10px;
+  width: 342px;
+}
+
+form.my-app input[type="text"],form.my-app input[type="tel"]{
+  background-color: #fff;
+  padding: 10px 12px;
+  font-family: Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+
+}
+
+form.my-app input[type="tel"] {
+  width: 326px;
+  padding: 10px 70px; 
+}
+
+div.form-title {
+  text-align: center;
+  font-size: 17px;
+  line-height: 125%;
+  margin-bottom: 40px;
+}
+
+div.fio {
+  margin-bottom: 20px;
+}
+
+div.labels {
+  margin-bottom: 8px;
+}
+
+div.labels label {
+  text-transform: uppercase;
+  width: 170px;
+  display: inline-block;
+  color: #999;
+}
+
+div.fio input {
+  width: 132px;
+}
+
+div.phone input {
+  width: 300px;
+}
+
+div.fio input:first-child {
+  margin-right:5px;
+  clear: left;
+}
+
+div.fio input:last-child {
+  margin-left:5px;
+}
+
+div.submit {
+  text-align: center;
+  margin: 40px; 
+}
+
+div.submit>input[type="submit"] { 
+  color: #fff;
+  padding: 12px 16px;
+  font-family: Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  border: 1px solid #0880FD;
+  border-radius: 4px;
+  background-color: #0880FD;
+}
+
