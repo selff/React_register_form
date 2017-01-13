@@ -15,7 +15,9 @@ const professions = [
   "Столяр", "Таксист","Токарь","Уборщица","Уролог","Фармацевт","Химик","Хирург","Церюльник","Чеботарь",
   "Шахтер","Шоколатье","Щипачь","Эндокринолог","Эквелибрист","Юрист","Ювелир","Ядерщик"
 ]
-  
+
+var findChar;
+
 function escapeRegexCharacters(str) {
   return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
@@ -29,19 +31,11 @@ function getSuggestions(value) {
 
   const regex = new RegExp('^' + escapedValue, 'i');
   
+  findChar = escapedValue;
+
   let arr = professions.filter(profession => regex.test(profession));
-  //arr = arr.map(profession =>  profession.replace(regex, function(str) {return '<b>'+str+'</b>'}));
+  arr = arr.map(profession =>  profession.slice(escapedValue.length, profession.length) );
   return arr;
-}
-
-function getSuggestionValue(suggestion) {
-  return suggestion;
-}
-
-function renderSuggestion(suggestion) {
-  return (
-    <span>{suggestion}</span>
-  );
 }
 
 function FormTitle() {
@@ -76,6 +70,19 @@ function PhoneLabel() {
       <label>Телефон</label>   
     </div> 
   )
+}
+
+
+function getSuggestionValue(suggestion) {
+  return findChar + suggestion
+};
+
+function renderSuggestion(suggestion) {
+  return (
+    <div>
+      <span><b>{findChar}</b>{suggestion}</span>
+    </div>
+  );
 }
 
 class ButtonSubmit extends React.Component {
