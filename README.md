@@ -9,13 +9,13 @@ with
 
 ## Install
 
-$ git clone https://github.com/selff/React_register_form.git
-$ cd React_register_form
-$ npm install
+> $ git clone https://github.com/selff/React_register_form.git
+> $ cd React_register_form
+> $ npm install
 
 ## Start
 
-$ npm start
+> $ npm start
 
 ## Screenshot
 
