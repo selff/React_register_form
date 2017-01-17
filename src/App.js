@@ -13,7 +13,14 @@ const professions = [
   "Носильщик","Нейрохирург","Орнитолог","Оссенизатор","Остеопат","Психотерапевт","Полицейский",
   "Программист","Полеантолог","Педиатор","Радиоведущий","Реаниматолог","Стилист", 
   "Столяр", "Таксист","Токарь","Уборщица","Уролог","Фармацевт","Химик","Хирург","Церюльник","Чеботарь",
-  "Шахтер","Шоколатье","Щипачь","Эндокринолог","Эквелибрист","Юрист","Ювелир","Ядерщик"
+  "Шахтер","Шоколатье","Щипачь","Эндокринолог","Эквелибрист","Юрист","Ювелир","Ядерщик",
+  "Artist","Atlet","Broker","Bankir","Coder","Cleaner","Doctor","Engineer","Electrician",
+  "Farmer","Geographer","Historian","Insueance clerk","Jeweller","Keeper","Lecturer",
+  "Manager","Mechanocal","Microbiologist","Musician","Newspaper editor","Operator",
+  "Packer","Pharmacist","Philosopher","Photographer","Policeman","Postalman","Programmer",
+  "Producer","Psychologist","Quality inspector","Radio dj","Railway guard",
+  "Sales manager","Scaffolder","Tanner","Trainer","Tutor","Usher","Valuer","Waiter",
+  "Weaver","Worker","Zookeeper"
 ]
 
 var findChar;
@@ -41,7 +48,7 @@ function getSuggestions(value) {
 function FormTitle() {
   return (
     <div className="form-title">
-      <b>Зарегистрируйтесь</b> и начните продавать услуги через интернет сегодня
+      <b>Register please</b> and start to sell services through the Internet today
     </div>
   )
 }
@@ -50,15 +57,15 @@ function InputFio() {
   return (
     <div>
       <div className="labels">
-        <label>Имя</label>
-        <label>Фамилия</label>
+        <label>Firstname</label>
+        <label>Lastname</label>
       </div>
       <div className="fio">
         <input type="text" name="FirstName" />
         <input type="text" name="LastName" />
       </div>
       <div className="labels">
-        <label>Профессия</label>    
+        <label>Profession</label>    
       </div>      
     </div>
   )
@@ -67,7 +74,7 @@ function InputFio() {
 function PhoneLabel() {
   return (
     <div className="labels">
-      <label>Телефон</label>   
+      <label>Phone</label>   
     </div> 
   )
 }
@@ -89,7 +96,7 @@ class ButtonSubmit extends React.Component {
   render() {
     return (
       <div className="submit">
-        <input type="submit" value="Зарегистрироваться" />
+        <input type="submit" value="Registration" />
       </div>
     );
   }
@@ -132,7 +139,7 @@ class App extends React.Component {
   render() {
     const { value, suggestions } = this.state;
     const inputProps = {
-      placeholder: "Начните вводить название",
+      placeholder: "Start typing ...",
       value,
       onChange: this.onChange
     };
@@ -152,7 +159,7 @@ class App extends React.Component {
       <ReactTelephoneInput
         defaultCountry='ru'
         flagsImagePath='/img/flags.png'
-        preferredCountries={['ru', 'by', 'ua', 'kz']}
+        preferredCountries={['gb', 'de', 'ru']}
         />
         <ButtonSubmit />
     </form>
